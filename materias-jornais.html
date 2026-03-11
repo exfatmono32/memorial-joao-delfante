@@ -1,13 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matérias Jornais | Memorial João Delfante</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matérias Jornalísticas | Memorial João Delfante</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .news-page-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      text-align: center;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .news-intro {
+      max-width: 920px;
+      margin: 0 auto 28px auto;
+      text-align: center;
+      line-height: 1.85;
+      font-size: 1rem;
+      color: #2f2f2f;
+    }
+
+    .news-highlight {
+      max-width: 920px;
+      margin: 0 auto 40px auto;
+      background: #f7f7f7;
+      border: 1px solid #d9d9d9;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .news-highlight h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      margin-bottom: 12px;
+      text-align: center;
+      color: #111;
+    }
+
+    .news-highlight p {
+      margin: 0;
+      line-height: 1.8;
+      text-align: center;
+      color: #333;
+    }
+
+    .news-grid {
+      max-width: 1050px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .news-card {
+      background: #fff;
+      border: 1px solid #d8d8d8;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px rgba(0,0,0,0.10);
+    }
+
+    .news-source {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 14px;
+    }
+
+    .news-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.8rem;
+      line-height: 1.15;
+      margin: 0 0 14px 0;
+      color: #111;
+    }
+
+    .news-card p {
+      margin: 0 0 22px 0;
+      color: #444;
+      line-height: 1.75;
+      font-size: 0.96rem;
+    }
+
+    .news-link {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 12px 20px;
+      border: 1px solid #1f1f1f;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      transition: 0.2s ease;
+      background: #fff;
+    }
+
+    .news-link:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .news-note {
+      max-width: 900px;
+      margin: 34px auto 0 auto;
+      text-align: center;
+      color: #555;
+      line-height: 1.7;
+      font-size: 0.96rem;
+    }
+  </style>
 </head>
 <body class="section-page">
   <div class="section-shell">
@@ -17,14 +143,111 @@
     </header>
 
     <section class="content-card">
-      <h2>Matérias Jornais</h2>
-      <p>Aqui você pode colocar recortes, transcrições e links de matérias publicadas em jornais e portais.</p>
-      <p>Também é possível separar por data, veículo ou assunto, deixando a navegação mais organizada.</p>
-      <ul class="placeholder-list">
-        <li>Você pode substituir este texto por conteúdo real, fotos, vídeos, links ou documentos.</li>
-        <li>Também dá para organizar tudo em blocos, cards, galerias ou linhas do tempo.</li>
-        <li>Se quiser publicar online, este projeto já funciona bem no GitHub Pages.</li>
-      </ul>
+      <h1 class="news-page-title">Matérias Jornalísticas</h1>
+
+      <div class="news-intro">
+        <p>
+          Nesta página estão reunidas matérias jornalísticas relacionadas ao caso
+          de João Delfante. Este espaço foi criado para preservar os registros da
+          cobertura feita pela imprensa e facilitar o acesso às publicações sobre
+          os acontecimentos, seus desdobramentos e a repercussão do caso.
+        </p>
+      </div>
+
+      <div class="news-highlight">
+        <h2>Acervo de reportagens</h2>
+        <p>
+          Aqui você encontrará matérias publicadas por diferentes veículos de
+          comunicação, abordando momentos importantes do caso, desde as primeiras
+          notícias até reportagens mais completas sobre a investigação e seus
+          desdobramentos.
+        </p>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <div>
+            <span class="news-source">O Taboanense</span>
+            <h3>Primeira matéria</h3>
+            <p>
+              Primeira reportagem sobre o caso, com a notícia inicial a respeito
+              do atropelamento e das informações divulgadas naquele momento.
+            </p>
+          </div>
+          <a
+            class="news-link"
+            href="https://www.otaboanense.com.br/jovem-atropelada-na-avenida-taboao-da-serra-morre-apos-ser-socorrida-motorista-segue-foragido/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ler matéria
+          </a>
+        </article>
+
+        <article class="news-card">
+          <div>
+            <span class="news-source">Metrópoles</span>
+            <h3>Matéria sobre a prisão</h3>
+            <p>
+              Reportagem sobre a prisão do motorista, trazendo informações sobre
+              a identificação do suspeito e o andamento inicial do caso.
+            </p>
+          </div>
+          <a
+            class="news-link"
+            href="https://www.metropoles.com/sao-paulo/motorista-atropelar-casal"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ler matéria
+          </a>
+        </article>
+
+        <article class="news-card">
+          <div>
+            <span class="news-source">CNN Brasil</span>
+            <h3>Matéria sobre a confissão</h3>
+            <p>
+              Matéria jornalística com informações sobre a confissão do motorista
+              e os detalhes divulgados após o avanço das investigações.
+            </p>
+          </div>
+          <a
+            class="news-link"
+            href="https://www.cnnbrasil.com.br/nacional/sudeste/sp/motorista-que-matou-casal-em-faixa-de-pedestre-confessou-que-bebeu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ler matéria
+          </a>
+        </article>
+
+        <article class="news-card">
+          <div>
+            <span class="news-source">UOL</span>
+            <h3>Matéria completa sobre o caso</h3>
+            <p>
+              Reportagem mais completa reunindo informações gerais sobre o caso,
+              seus desdobramentos e a cobertura jornalística publicada até então.
+            </p>
+          </div>
+          <a
+            class="news-link"
+            href="https://noticias.uol.com.br/cotidiano/ultimas-noticias/2026/02/25/motorista-e-preso-apos-atropelar-casal-em-faixa-de-pedestre-na-grande-sp.htm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ler matéria
+          </a>
+        </article>
+      </div>
+
+      <div class="news-note">
+        <p>
+          As matérias listadas acima pertencem aos respectivos veículos de
+          comunicação responsáveis por sua publicação original.
+        </p>
+      </div>
     </section>
   </div>
 </body>
