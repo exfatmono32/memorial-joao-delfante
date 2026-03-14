@@ -1,297 +1,300 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reportagens | Memorial João Delfante</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Caso João Delfante e Thalita Rodrigues | Memorial</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 
-  <style>
-    .video-page-title {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      text-align: center;
-      margin-bottom: 20px;
-      color: #111;
-    }
+<style>
+.video-page-title {
+font-family: "Cormorant Garamond", serif;
+font-size: clamp(2.2rem, 5vw, 4rem);
+text-align: center;
+margin-bottom: 20px;
+color: #111;
+}
 
-    .video-intro {
-      max-width: 900px;
-      margin: 0 auto 30px auto;
-      text-align: center;
-      line-height: 1.8;
-      font-size: 1rem;
-      color: #2f2f2f;
-    }
+.video-intro {
+max-width: 900px;
+margin: 0 auto 30px auto;
+text-align: center;
+line-height: 1.8;
+font-size: 1rem;
+color: #2f2f2f;
+}
 
-    .video-highlight {
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      background: #f7f7f7;
-      border: 1px solid #d9d9d9;
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
+.video-highlight {
+max-width: 900px;
+margin: 0 auto 40px auto;
+background: #f7f7f7;
+border: 1px solid #d9d9d9;
+border-radius: 18px;
+padding: 24px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
-    .video-highlight h2 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 2rem;
-      margin-bottom: 12px;
-      text-align: center;
-      color: #111;
-    }
+.video-highlight h2 {
+font-family: "Cormorant Garamond", serif;
+font-size: 2rem;
+margin-bottom: 12px;
+text-align: center;
+color: #111;
+}
 
-    .video-highlight p {
-      margin: 0;
-      line-height: 1.8;
-      text-align: center;
-      color: #333;
-    }
+.video-highlight p {
+margin: 0;
+line-height: 1.8;
+text-align: center;
+color: #333;
+}
 
-    .videos-grid {
-      max-width: 1100px;
-      margin: 0 auto 34px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-    }
+.videos-grid {
+max-width: 1100px;
+margin: 0 auto 34px auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 24px;
+}
 
-    .video-card {
-      background: #fff;
-      border: 1px solid #d8d8d8;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
-    }
+.video-card {
+background: #fff;
+border: 1px solid #d8d8d8;
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+display: flex;
+flex-direction: column;
+}
 
-    .video-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.10);
-    }
+.video-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 16px 30px rgba(0, 0, 0, 0.10);
+}
 
-    .video-thumb {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      background: #ddd;
-    }
+.video-thumb {
+display: block;
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+background: #ddd;
+}
 
-    .video-card-content {
-      padding: 18px 18px 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex: 1;
-    }
+.video-card-content {
+padding: 18px 18px 22px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+flex: 1;
+}
 
-    .video-card h3 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.7rem;
-      margin: 0;
-      color: #111;
-      line-height: 1.1;
-    }
+.video-card h3 {
+font-family: "Cormorant Garamond", serif;
+font-size: 1.7rem;
+margin: 0;
+color: #111;
+line-height: 1.1;
+}
 
-    .video-card p {
-      margin: 0;
-      color: #444;
-      line-height: 1.7;
-      font-size: 0.95rem;
-      flex: 1;
-    }
+.video-card p {
+margin: 0;
+color: #444;
+line-height: 1.7;
+font-size: 0.95rem;
+flex: 1;
+}
 
-    .video-link {
-      display: inline-block;
-      align-self: flex-start;
-      padding: 12px 20px;
-      border: 1px solid #1f1f1f;
-      border-radius: 999px;
-      text-decoration: none;
-      color: #111;
-      font-weight: 600;
-      transition: 0.2s ease;
-      background: #fff;
-    }
+.video-link {
+display: inline-block;
+align-self: flex-start;
+padding: 12px 20px;
+border: 1px solid #1f1f1f;
+border-radius: 999px;
+text-decoration: none;
+color: #111;
+font-weight: 600;
+transition: 0.2s ease;
+background: #fff;
+}
 
-    .video-link:hover {
-      background: #111;
-      color: #fff;
-    }
+.video-link:hover {
+background: #111;
+color: #fff;
+}
 
-    .video-note {
-      max-width: 900px;
-      margin: 30px auto 0 auto;
-      text-align: center;
-      color: #555;
-      line-height: 1.7;
-      font-size: 0.96rem;
-    }
-  </style>
+.video-note {
+max-width: 900px;
+margin: 30px auto 0 auto;
+text-align: center;
+color: #555;
+line-height: 1.7;
+font-size: 0.96rem;
+}
+</style>
+
 </head>
+
 <body class="section-page">
-  <div class="section-shell">
-    <header class="topbar">
-      <a class="back-link" href="index.html">← Voltar ao início</a>
-      <p class="site-name">Memorial João Delfante</p>
-    </header>
 
-    <section class="content-card">
-      <h1 class="video-page-title">Reportagens</h1>
+<div class="section-shell">
 
-      <div class="video-intro">
-        <p>
-          Nesta página estão reunidas reportagens em vídeo relacionadas ao caso de
-          João Delfante e Thalita Rodrigues. O objetivo desta seção é reunir registros
-          jornalísticos que documentam os acontecimentos, a repercussão pública e os
-          desdobramentos do caso ao longo do tempo.
-        </p>
+<header class="topbar">
+<a class="back-link" href="index.html">← Voltar ao início</a>
+<p class="site-name">Memorial João Delfante</p>
+</header>
 
-        <p>
-          Os conteúdos apresentados abaixo foram publicados por diferentes veículos
-          de comunicação e servem como registro histórico das informações divulgadas
-          sobre o caso.
-        </p>
-      </div>
+<section class="content-card">
 
-      <div class="video-highlight">
-        <h2>Reportagens</h2>
-        <p>
-          Aqui você encontrará vídeos jornalísticos organizados individualmente,
-          facilitando o acesso a cada reportagem publicada sobre o caso.
-        </p>
-      </div>
+<h1 class="video-page-title">Caso João Delfante e Thalita Rodrigues</h1>
 
-      <div class="videos-grid">
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/puW2cDmLEWE/hqdefault.jpg" alt="Thumbnail da reportagem 1">
-          <div class="video-card-content">
-            <h3>Reportagem 1</h3>
-            <p>Primeira reportagem divulgada sobre o caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/puW2cDmLEWE?si=sxi488U6AupArpFE" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
+<div class="video-intro">
+<p>
+Nesta página estão reunidas reportagens em vídeo relacionadas ao caso de João Delfante e Thalita Rodrigues.
+O objetivo desta seção é reunir registros jornalísticos que documentam os acontecimentos, a repercussão
+pública e os desdobramentos do caso ao longo do tempo.
+</p>
 
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/EHoUt2JBO3U/hqdefault.jpg" alt="Thumbnail da reportagem 2">
-          <div class="video-card-content">
-            <h3>Reportagem 2</h3>
-            <p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/EHoUt2JBO3U?si=GRBlLyZFBZ837PEw" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
+<p>
+Os conteúdos apresentados abaixo foram publicados por diferentes veículos de comunicação e servem
+como registro histórico das informações divulgadas sobre o caso.
+</p>
+</div>
 
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/p1gYX4Lhyi8/hqdefault.jpg" alt="Thumbnail da reportagem 3">
-          <div class="video-card-content">
-            <h3>Reportagem 3</h3>
-            <p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/p1gYX4Lhyi8?si=SyZPl9kCICcLdV1C" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
+<div class="video-highlight">
+<h2>Reportagens</h2>
+<p>
+Aqui você encontrará vídeos jornalísticos organizados individualmente, facilitando o acesso a cada
+reportagem publicada sobre o caso.
+</p>
+</div>
 
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/d5UE3nsYRmE/hqdefault.jpg" alt="Thumbnail da reportagem 4">
-          <div class="video-card-content">
-            <h3>Reportagem 4</h3>
-            <p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/d5UE3nsYRmE?si=ydNm7YsZVf7vojce" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
+<div class="videos-grid">
 
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/1qUeUqLgu0Q/hqdefault.jpg" alt="Thumbnail da reportagem 5">
-          <div class="video-card-content">
-            <h3>Reportagem 5</h3>
-            <p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/1qUeUqLgu0Q?si=28HT5veNHG9AQXhX" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/puW2cDmLEWE/hqdefault.jpg" alt="Thumbnail da reportagem 1">
+<div class="video-card-content">
+<h3>Reportagem 1</h3>
+<p>Primeira reportagem divulgada sobre o caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/puW2cDmLEWE?si=sxi488U6AupArpFE" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
 
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/iQuvzBjM53M/hqdefault.jpg" alt="Thumbnail da reportagem 6">
-          <div class="video-card-content">
-            <h3>Reportagem 6</h3>
-            <p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/iQuvzBjM53M?si=O6E-MUATw8wvHCOF" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/EHoUt2JBO3U/hqdefault.jpg" alt="Thumbnail da reportagem 2">
+<div class="video-card-content">
+<h3>Reportagem 2</h3>
+<p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/EHoUt2JBO3U?si=GRBlLyZFBZ837PEw" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
 
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/7AYQeklCbb8/hqdefault.jpg" alt="Thumbnail da reportagem 7">
-          <div class="video-card-content">
-            <h3>Reportagem 7</h3>
-            <p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/7AYQeklCbb8?si=4Uvg1-1o9dFsKdqN" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/p1gYX4Lhyi8/hqdefault.jpg" alt="Thumbnail da reportagem 3">
+<div class="video-card-content">
+<h3>Reportagem 3</h3>
+<p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/p1gYX4Lhyi8?si=SyZPl9kCICcLdV1C" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
 
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/18aRXRk--M8/hqdefault.jpg" alt="Thumbnail da reportagem 8">
-          <div class="video-card-content">
-            <h3>Reportagem 8</h3>
-            <p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/18aRXRk--M8?si=UEL0eNP_NJBCctL-" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/d5UE3nsYRmE/hqdefault.jpg" alt="Thumbnail da reportagem 4">
+<div class="video-card-content">
+<h3>Reportagem 4</h3>
+<p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/d5UE3nsYRmE?si=ydNm7YsZVf7vojce" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
 
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/wFEkaGjcsEg/hqdefault.jpg" alt="Thumbnail da reportagem 9">
-          <div class="video-card-content">
-            <h3>Reportagem 9</h3>
-            <p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/wFEkaGjcsEg?si=QE8njtmG8fRycptQ" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/1qUeUqLgu0Q/hqdefault.jpg" alt="Thumbnail da reportagem 5">
+<div class="video-card-content">
+<h3>Reportagem 5</h3>
+<p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/1qUeUqLgu0Q?si=28HT5veNHG9AQXhX" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
 
-        <article class="video-card">
-          <img class="video-thumb" src="https://img.youtube.com/vi/kXJbb6A28v4/hqdefault.jpg" alt="Thumbnail da reportagem 10">
-          <div class="video-card-content">
-            <h3>Reportagem 10</h3>
-            <p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
-            <a class="video-link" href="https://youtu.be/kXJbb6A28v4?si=vDGL1rxu5x-hcFtr" target="_blank" rel="noopener noreferrer">
-              Assistir reportagem
-            </a>
-          </div>
-        </article>
-      </div>
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/iQuvzBjM53M/hqdefault.jpg" alt="Thumbnail da reportagem 6">
+<div class="video-card-content">
+<h3>Reportagem 6</h3>
+<p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/iQuvzBjM53M?si=O6E-MUATw8wvHCOF" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
 
-      <div class="video-note">
-        <p>
-          Os vídeos exibidos acima pertencem aos respectivos canais e veículos de
-          comunicação responsáveis por sua publicação original.
-        </p>
-      </div>
-    </section>
-  </div>
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/7AYQeklCbb8/hqdefault.jpg" alt="Thumbnail da reportagem 7">
+<div class="video-card-content">
+<h3>Reportagem 7</h3>
+<p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/7AYQeklCbb8?si=4Uvg1-1o9dFsKdqN" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
+
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/18aRXRk--M8/hqdefault.jpg" alt="Thumbnail da reportagem 8">
+<div class="video-card-content">
+<h3>Reportagem 8</h3>
+<p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/18aRXRk--M8?si=UEL0eNP_NJBCctL-" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
+
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/wFEkaGjcsEg/hqdefault.jpg" alt="Thumbnail da reportagem 9">
+<div class="video-card-content">
+<h3>Reportagem 9</h3>
+<p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/wFEkaGjcsEg?si=QE8njtmG8fRycptQ" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
+
+<article class="video-card">
+<img class="video-thumb" src="https://img.youtube.com/vi/kXJbb6A28v4/hqdefault.jpg" alt="Thumbnail da reportagem 10">
+<div class="video-card-content">
+<h3>Reportagem 10</h3>
+<p>Registro em vídeo relacionado ao caso João Delfante e Thalita Rodrigues.</p>
+<a class="video-link" href="https://youtu.be/kXJbb6A28v4?si=vDGL1rxu5x-hcFtr" target="_blank" rel="noopener noreferrer">
+Assistir reportagem
+</a>
+</div>
+</article>
+
+</div>
+
+<div class="video-note">
+<p>
+Os vídeos exibidos acima pertencem aos respectivos canais e veículos de comunicação responsáveis por sua publicação original.
+</p>
+</div>
+
+</section>
+</div>
+
 </body>
 </html>
