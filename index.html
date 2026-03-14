@@ -10,62 +10,127 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    .hero {
+    .intro-screen {
+      position: fixed;
+      inset: 0;
+      background: #e9eaec;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 280px;
-      text-align: center;
+      z-index: 9999;
+      animation: introFadeOut 1s ease forwards;
+      animation-delay: 5.2s;
+    }
+
+    .intro-text-wrap {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
     }
 
-    .hero-small {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.35em;
-      margin: 0 0 8px 0;
-      opacity: 0;
-      animation: memorialAway 2.4s ease forwards;
-    }
-
-    .hero h1 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(3rem, 7vw, 6rem);
-      line-height: 0.95;
+    .intro-memorial,
+    .intro-name {
+      position: absolute;
+      text-align: center;
+      color: #111;
       margin: 0;
       opacity: 0;
-      animation: nameCome 2.4s ease forwards;
-      animation-delay: 0.35s;
+      white-space: nowrap;
     }
 
-    @keyframes memorialAway {
+    .intro-memorial {
+      font-family: "Montserrat", sans-serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      animation: memorialAppear 2.2s ease forwards;
+    }
+
+    .intro-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3.3rem, 9vw, 7rem);
+      line-height: 1;
+      animation: nameZoom 2.4s ease forwards;
+      animation-delay: 2.4s;
+    }
+
+    .home-container {
+      opacity: 0;
+      animation: showHome 0.8s ease forwards;
+      animation-delay: 5.3s;
+    }
+
+    @keyframes memorialAppear {
       0% {
-        transform: scale(1.35) translateY(0);
         opacity: 0;
+        transform: scale(0.96);
+        filter: blur(8px);
       }
-      25% {
+      20% {
         opacity: 1;
+        filter: blur(4px);
+      }
+      45% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+      }
+      75% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
       }
       100% {
-        transform: scale(0.82) translateY(-10px);
-        opacity: 1;
+        opacity: 0;
+        transform: scale(1.03);
+        filter: blur(6px);
       }
     }
 
-    @keyframes nameCome {
+    @keyframes nameZoom {
       0% {
-        transform: scale(0.55) translateY(24px);
         opacity: 0;
+        transform: scale(0.78);
+        filter: blur(8px);
+      }
+      30% {
+        opacity: 1;
+        filter: blur(3px);
       }
       100% {
-        transform: scale(1) translateY(0);
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes introFadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+
+    @keyframes showHome {
+      to {
         opacity: 1;
       }
     }
   </style>
 </head>
 <body class="home-page">
+  <div class="intro-screen" aria-hidden="true">
+    <div class="intro-text-wrap">
+      <h2 class="intro-memorial">Memorial</h2>
+      <h1 class="intro-name">João Delfante</h1>
+    </div>
+  </div>
+
   <main class="home-container">
     <header class="hero">
       <p class="hero-small">MEMORIAL</p>
