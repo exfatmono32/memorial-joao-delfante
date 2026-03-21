@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Regular.otf") format("opentype");
+}
+
 :root {
   --bg: #dfe2e5;
   --text: #111111;
@@ -40,18 +45,20 @@ body {
   margin-bottom: 72px;
 }
 
+/* 🔥 MEMORIAL (agora com Cinzel) */
 .hero-small {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Cinzel", serif;
   font-size: clamp(2.4rem, 5vw, 4.2rem);
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
   margin: 0;
   line-height: 0.95;
 }
 
+/* 🔥 JOÃO DELFANTE (Cinzel também) */
 .hero h1 {
   margin: 0;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cinzel", serif;
   font-size: clamp(3rem, 8vw, 5.8rem);
   font-weight: 600;
   line-height: 0.92;
@@ -129,8 +136,9 @@ body {
   outline: none;
 }
 
+/* 🔥 Nome do site (Cinzel deixa mais elegante) */
 .site-name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cinzel", serif;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   margin: 0;
   text-align: right;
@@ -144,8 +152,9 @@ body {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
+/* 🔥 TÍTULOS das páginas */
 .content-card h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cinzel", serif;
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   margin: 0 0 10px;
 }
