@@ -24,8 +24,8 @@
       justify-content: center;
       z-index: 9999;
       overflow: hidden;
-      animation: introFadeOut 1s ease forwards;
-      animation-delay: 5.3s;
+      animation: introFadeOut 0.9s ease forwards;
+      animation-delay: 4.8s;
     }
 
     .intro-text-wrap {
@@ -49,33 +49,33 @@
       transform-style: preserve-3d;
     }
 
-    /* Memorial ao fundo, afastando levemente */
+    /* Memorial já entra e recua levemente */
     .intro-memorial {
       font-family: "Cinzel", serif;
       font-size: clamp(2rem, 4.8vw, 4rem);
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       opacity: 0;
-      animation: memorialDistance 2.8s ease forwards;
       z-index: 1;
+      animation: memorialDistance 3.2s ease forwards;
     }
 
-    /* João Delfante vindo para frente */
+    /* João Delfante começa antes, sem esperar o Memorial sumir */
     .intro-name {
       font-family: "Cormorant Garamond", serif;
       font-size: clamp(3.2rem, 9vw, 7rem);
       line-height: 1;
       opacity: 0;
-      animation: nameForward 2.8s ease forwards;
-      animation-delay: 1.8s;
       z-index: 2;
+      animation: nameForward 3s ease forwards;
+      animation-delay: 0.9s;
     }
 
     .home-container {
       opacity: 0;
       transform: translateY(10px);
-      animation: showHome 0.9s ease forwards;
-      animation-delay: 5.4s;
+      animation: showHome 0.8s ease forwards;
+      animation-delay: 4.9s;
     }
 
     @keyframes memorialDistance {
@@ -85,17 +85,17 @@
         filter: blur(8px);
       }
       20% {
-        opacity: 1;
-        filter: blur(3px);
+        opacity: 0.95;
+        filter: blur(2px);
       }
-      55% {
-        opacity: 1;
-        transform: translateZ(-60px) scale(0.94);
+      60% {
+        opacity: 0.8;
+        transform: translateZ(-60px) scale(0.95);
         filter: blur(0);
       }
       100% {
-        opacity: 0.45;
-        transform: translateZ(-120px) scale(0.88);
+        opacity: 0.35;
+        transform: translateZ(-110px) scale(0.88);
         filter: blur(1px);
       }
     }
@@ -103,12 +103,12 @@
     @keyframes nameForward {
       0% {
         opacity: 0;
-        transform: translateZ(-140px) scale(0.82);
+        transform: translateZ(-120px) scale(0.82);
         filter: blur(8px);
       }
-      25% {
+      35% {
         opacity: 1;
-        filter: blur(3px);
+        filter: blur(2px);
       }
       100% {
         opacity: 1;
