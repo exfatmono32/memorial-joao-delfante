@@ -25,17 +25,16 @@
       z-index: 9999;
       overflow: hidden;
       animation: introFadeOut 0.9s ease forwards;
-      animation-delay: 4.8s;
+      animation-delay: 5s;
     }
 
     .intro-text-wrap {
       position: relative;
-      width: 100%;
+      width: min(1000px, 92vw);
       height: 260px;
       display: flex;
       align-items: center;
       justify-content: center;
-      perspective: 1200px;
       overflow: hidden;
     }
 
@@ -44,75 +43,71 @@
       position: absolute;
       margin: 0;
       color: #111;
-      white-space: nowrap;
       text-align: center;
-      transform-style: preserve-3d;
+      white-space: nowrap;
+      opacity: 0;
     }
 
-    /* Memorial já entra e recua levemente */
+    /* 1º texto */
     .intro-memorial {
       font-family: "Cinzel", serif;
       font-size: clamp(2rem, 4.8vw, 4rem);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      opacity: 0;
-      z-index: 1;
-      animation: memorialDistance 3.2s ease forwards;
+      animation: memorialSolo 2.2s ease forwards;
     }
 
-    /* João Delfante começa antes, sem esperar o Memorial sumir */
+    /* 2º texto */
     .intro-name {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(3.2rem, 9vw, 7rem);
-      line-height: 1;
-      opacity: 0;
-      z-index: 2;
-      animation: nameForward 3s ease forwards;
-      animation-delay: 0.9s;
+      font-size: clamp(3.5rem, 8vw, 6.8rem);
+      line-height: 0.95;
+      animation: nameSolo 2.2s ease forwards;
+      animation-delay: 2.2s;
     }
 
     .home-container {
       opacity: 0;
       transform: translateY(10px);
       animation: showHome 0.8s ease forwards;
-      animation-delay: 4.9s;
+      animation-delay: 5.1s;
     }
 
-    @keyframes memorialDistance {
+    @keyframes memorialSolo {
       0% {
         opacity: 0;
-        transform: translateZ(0) scale(1);
+        transform: scale(1);
         filter: blur(8px);
       }
       20% {
-        opacity: 0.95;
+        opacity: 1;
         filter: blur(2px);
       }
-      60% {
-        opacity: 0.8;
-        transform: translateZ(-60px) scale(0.95);
+      70% {
+        opacity: 1;
+        transform: scale(0.94);
         filter: blur(0);
       }
       100% {
-        opacity: 0.35;
-        transform: translateZ(-110px) scale(0.88);
-        filter: blur(1px);
+        opacity: 0;
+        transform: scale(0.88);
+        filter: blur(3px);
       }
     }
 
-    @keyframes nameForward {
+    @keyframes nameSolo {
       0% {
         opacity: 0;
-        transform: translateZ(-120px) scale(0.82);
+        transform: scale(0.82);
         filter: blur(8px);
       }
-      35% {
+      25% {
         opacity: 1;
         filter: blur(2px);
       }
       100% {
         opacity: 1;
-        transform: translateZ(0) scale(1);
+        transform: scale(1);
         filter: blur(0);
       }
     }
