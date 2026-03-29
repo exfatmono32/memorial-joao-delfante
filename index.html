@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memorial João Delfante</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    /* 🔥 ALTERAÇÃO AQUI */
+    .nome-principal {
+      font-family: "Cormorant Garamond", serif;
+    }
+
     .intro-screen {
       position: fixed;
       inset: 0;
@@ -81,8 +87,6 @@
       }
       75% {
         opacity: 1;
-        transform: scale(1);
-        filter: blur(0);
       }
       100% {
         opacity: 0;
@@ -123,7 +127,9 @@
     }
   </style>
 </head>
+
 <body class="home-page">
+
   <div class="intro-screen" aria-hidden="true">
     <div class="intro-text-wrap">
       <h2 class="intro-memorial">Memorial</h2>
@@ -134,7 +140,10 @@
   <main class="home-container">
     <header class="hero">
       <p class="hero-small">MEMORIAL</p>
-      <h1>JOÃO DELFANTE</h1>
+
+      <!-- 🔥 ALTERAÇÃO AQUI -->
+      <h1 class="nome-principal">JOÃO DELFANTE</h1>
+
     </header>
 
     <nav class="menu-grid" aria-label="Seções do memorial">
@@ -146,5 +155,6 @@
       <a class="menu-button" href="missao.html">Missão</a>
     </nav>
   </main>
+
 </body>
 </html>
