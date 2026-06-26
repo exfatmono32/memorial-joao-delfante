@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homenagens | Memorial João Delfante</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,39 +12,62 @@
 
   <style>
     .tribute-card {
-      margin-top: 48px;
-      padding-top: 36px;
-      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      margin-top: 52px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(0, 0, 0, 0.14);
     }
 
     .tribute-card:first-of-type {
-      margin-top: 32px;
+      margin-top: 36px;
+    }
+
+    .tribute-card h2 {
+      margin-bottom: 4px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1;
+    }
+
+    .tribute-role {
+      margin: 0 0 24px;
+      font-size: 0.95rem;
+      opacity: 0.72;
     }
 
     .tribute-images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin: 24px 0;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin: 26px 0 30px;
     }
 
     .tribute-images img {
+      display: block;
       width: 100%;
-      height: 320px;
+      height: 380px;
       object-fit: cover;
-      border-radius: 22px;
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.16);
+      object-position: center;
+      border-radius: 24px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .tribute-images.single {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .tribute-images.single img {
+      max-height: 520px;
     }
 
     .tribute-author {
-      margin-top: 20px;
+      margin-top: 24px;
       font-weight: 600;
     }
 
-    .tribute-role {
-      margin-top: -8px;
-      font-size: 0.95rem;
-      opacity: 0.75;
+    @media (max-width: 640px) {
+      .tribute-images img {
+        height: 300px;
+      }
     }
   </style>
 </head>
@@ -68,7 +92,7 @@
           <p class="tribute-role">Amiga da Thalita</p>
 
           <div class="tribute-images">
-            <img src="mirele-violao.jpg" alt="Registro de apresentação de violão relacionada à memória de Mirele e Thalita">
+            <img src="mirele-violao.jpg" alt="Apresentação de violão na Fábricas de Cultura">
             <img src="mirele-pizza.jpg" alt="Grupo de amigos reunidos em uma pizzaria">
           </div>
 
@@ -80,7 +104,7 @@
 
           <p>Uma memória que fica guardada até hoje foi quando eu tinha acabado de abandonar o tratamento que estava fazendo no CAPS, tive uma recaída e estava planejando meu suicídio. A Thalita percebeu os sinais e, na mesma madrugada, ouvi alguém me gritando na janela do meu quarto. Quando olhei, lá estava ela e o Jeferson com pizza e refrigerante.</p>
 
-          <p>Eu me senti tão acolhida. Ela sempre fazia de tudo para me mostrar a beleza da vida e que vale a pena continuar, independente da fase em que nos encontramos.</p>
+          <p>Eu me senti tão acolhida. Ela sempre fazia de tudo para me mostrar a beleza da vida e que vale a pena continuar, independentemente da fase em que nos encontramos.</p>
 
           <p class="tribute-author">Mirele Celeste — Amiga da Thalita</p>
         </article>
@@ -89,8 +113,8 @@
           <h2>Jeff</h2>
           <p class="tribute-role">Amigo da Thalita</p>
 
-          <div class="tribute-images">
-            <img src="thalita-jeff.jpg" alt="Foto de Thalita sorrindo">
+          <div class="tribute-images single">
+            <img src="thalita-jeff.jpg" alt="Thalita sorrindo em um momento especial">
           </div>
 
           <p>Thalita era uma amiga incrível. Ela sabia como deixar leve qualquer ambiente com as suas loucuras. Ela não era perfeita, tinha seus problemas pessoais também, isso é óbvio, mas era raro ver ela reclamando ou lembrando dos próprios problemas. Em vez disso, ela preferia se descontrair, brincar, ser sarcástica e estar sempre com um sorriso no rosto.</p>
@@ -110,7 +134,7 @@
           <h2>Larissa</h2>
           <p class="tribute-role">Amiga do João</p>
 
-          <div class="tribute-images">
+          <div class="tribute-images single">
             <img src="larissa-joao.jpg" alt="João e Larissa juntos em uma lembrança afetiva">
           </div>
 
