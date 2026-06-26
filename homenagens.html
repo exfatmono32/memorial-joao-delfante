@@ -1,3 +1,11 @@
+Substitui o `homenagens.html` inteiro por este. Depois você só precisa colocar as imagens na mesma pasta do arquivo com estes nomes:
+
+* `mirele-violao.jpg`
+* `mirele-pizza.jpg`
+* `larissa-joao.jpg`
+* `thalita-jeff.jpg`
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,7 +16,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .tribute-card {
+      margin-top: 48px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .tribute-card:first-of-type {
+      margin-top: 32px;
+    }
+
+    .tribute-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .tribute-images img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.16);
+    }
+
+    .tribute-author {
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .tribute-role {
+      margin-top: -8px;
+      font-size: 0.95rem;
+      opacity: 0.75;
+    }
+  </style>
 </head>
+
 <body class="section-page">
   <div class="section-shell">
     <header class="topbar">
@@ -16,16 +63,84 @@
       <p class="site-name">MJD</p>
     </header>
 
-    <section class="content-card">
-      <h2>Homenagens</h2>
-      <p>Nesta página você pode reunir homenagens, mensagens e depoimentos dedicados a João Delfante.</p>
-      <p>É um espaço ideal para textos de familiares, amigos, colegas e instituições que queiram registrar lembranças e reconhecimento.</p>
-      <ul class="placeholder-list">
-        <li>Você pode substituir este texto por conteúdo real, fotos, vídeos, links ou documentos.</li>
-        <li>Também dá para organizar tudo em blocos, cards, galerias ou linhas do tempo.</li>
-        <li>Se quiser publicar online, este projeto já funciona bem no GitHub Pages.</li>
-      </ul>
-    </section>
+    <main>
+      <section class="content-card">
+        <h1>Homenagens</h1>
+
+        <p>Esta página reúne mensagens, lembranças e manifestações de carinho dedicadas a João Delfante e Thalita Rodrigues.</p>
+
+        <p>Cada relato preserva um pouco da presença, da história e do amor deixado por eles na vida de amigos, familiares e pessoas que tiveram o privilégio de conhecê-los.</p>
+
+        <article class="tribute-card">
+          <h2>Mirele Celeste</h2>
+          <p class="tribute-role">Amiga da Thalita</p>
+
+          <div class="tribute-images">
+            <img src="mirele-violao.jpg" alt="Registro de apresentação de violão relacionada à memória de Mirele e Thalita">
+            <img src="mirele-pizza.jpg" alt="Grupo de amigos reunidos em uma pizzaria">
+          </div>
+
+          <p>Aqui foi a primeira vez que saí de casa com amigos aos 14 anos. A Thalita frequentava bastante a minha casa e meus pais gostavam bastante dela, tanto que eu só podia sair com ela kkkk.</p>
+
+          <p>Conheci ela na aula de violão em 2018.</p>
+
+          <p>Essa foto foi na pandemia, eu tinha 16 anos e, mais uma vez, eu só podia sair de casa com ela presente.</p>
+
+          <p>Uma memória que fica guardada até hoje foi quando eu tinha acabado de abandonar o tratamento que estava fazendo no CAPS, tive uma recaída e estava planejando meu suicídio. A Thalita percebeu os sinais e, na mesma madrugada, ouvi alguém me gritando na janela do meu quarto. Quando olhei, lá estava ela e o Jeferson com pizza e refrigerante.</p>
+
+          <p>Eu me senti tão acolhida. Ela sempre fazia de tudo para me mostrar a beleza da vida e que vale a pena continuar, independente da fase em que nos encontramos.</p>
+
+          <p class="tribute-author">Mirele Celeste — Amiga da Thalita</p>
+        </article>
+
+        <article class="tribute-card">
+          <h2>Jeff</h2>
+          <p class="tribute-role">Amigo da Thalita</p>
+
+          <div class="tribute-images">
+            <img src="thalita-jeff.jpg" alt="Foto de Thalita sorrindo">
+          </div>
+
+          <p>Thalita era uma amiga incrível. Ela sabia como deixar leve qualquer ambiente com as suas loucuras. Ela não era perfeita, tinha seus problemas pessoais também, isso é óbvio, mas era raro ver ela reclamando ou lembrando dos próprios problemas. Em vez disso, ela preferia se descontrair, brincar, ser sarcástica e estar sempre com um sorriso no rosto.</p>
+
+          <p>Ela não gostava de ver ninguém para baixo, por isso atraía pessoas de todos os tipos para perto de si. Não tinha como não amar o jeito dela de ver o mundo.</p>
+
+          <p>Foi triste ver ela partindo, pois ela foi um pilar essencial na minha vida. Me ensinou muitas coisas, muitas lições sobre a vida, e ela já me deu motivo para continuar.</p>
+
+          <p>A última vez que falei com ela, ela estava tão feliz. Ela deixou claro para mim que estava vivendo um dos melhores momentos da vida dela. Então eu sei que Deus tem seus motivos para levar alguém tão provida de amor, vida e coragem.</p>
+
+          <p>Thalita, obrigado por ter existido em nossas vidas!</p>
+
+          <p class="tribute-author">Jeff — Amigo da Thalita</p>
+        </article>
+
+        <article class="tribute-card">
+          <h2>Larissa</h2>
+          <p class="tribute-role">Amiga do João</p>
+
+          <div class="tribute-images">
+            <img src="larissa-joao.jpg" alt="João e Larissa juntos em uma lembrança afetiva">
+          </div>
+
+          <p>Algumas das minhas lembranças favoritas com você são dessas coisas simples que aconteceram sem planejamento.</p>
+
+          <p>Teve aquela noite em que você foi lá para casa e jantou purê com macarrão. A gente ficou brincando e se zoando o tempo todo, daqueles momentos leves que acabam ficando na memória.</p>
+
+          <p>Também teve o dia em que você estava esperando o Uber. Você tirou foto com o Lincoln enquanto aguardava aparecer um carro. Eu estava deitada, a gente conversando, e você todo descabelado porque estava quase dormindo momentos antes. Até hoje acho engraçado lembrar disso.</p>
+
+          <p>Lembro também do dia em que coloquei o DIU. Depois, ficamos deitados, comendo brigadeiro e conversando. Eu falei que sua mãe tinha dito que você era meio rabugento. Você respondeu que não era e abriu um sorriso tão bonito que eu precisei tirar uma foto. Ainda brinquei que ia mostrar para ela como você ficava sorridente quando estava lá em casa.</p>
+
+          <p>Teve aquele dia em que você simplesmente dormiu o dia inteiro. Eu te deixei descansando enquanto fazia minhas coisas, e quando você acordou falei que dormia igual um anjinho. Foi uma cena tão tranquila e carinhosa que ficou guardada comigo.</p>
+
+          <p>E também aquele dia frio em que você foi me ver. Ficamos enroladinhos para nos aquecer e, olhando para nós dois, achei que estávamos tão bonitinhos juntos que tirei uma foto para guardar aquele momento.</p>
+
+          <p>São lembranças simples, mas são justamente essas pequenas cenas do dia a dia, as conversas, as brincadeiras, os sorrisos, o jeito que você dormia e os momentos de carinho que acabam se tornando algumas das memórias mais especiais. ❤️</p>
+
+          <p class="tribute-author">Larissa — Amiga do João</p>
+        </article>
+      </section>
+    </main>
   </div>
 </body>
 </html>
+```
