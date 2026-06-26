@@ -1,3 +1,6 @@
+Substitui o arquivo inteiro por este. Agora as imagens usam **`object-fit: contain`**, então **não corta nada**. Também aumentei a área das fotos e deixei o fundo claro quando a imagem não preencher tudo.
+
+```html id="homenagens-corrigido"
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,13 +15,13 @@
 
   <style>
     .tribute-card {
-      margin-top: 52px;
-      padding-top: 40px;
+      margin-top: 56px;
+      padding-top: 42px;
       border-top: 1px solid rgba(0, 0, 0, 0.14);
     }
 
     .tribute-card:first-of-type {
-      margin-top: 36px;
+      margin-top: 38px;
     }
 
     .tribute-card h2 {
@@ -28,45 +31,53 @@
     }
 
     .tribute-role {
-      margin: 0 0 24px;
+      margin: 0 0 26px;
       font-size: 0.95rem;
       opacity: 0.72;
     }
 
     .tribute-images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin: 26px 0 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin: 28px 0 34px;
     }
 
     .tribute-images img {
       display: block;
       width: 100%;
-      height: 380px;
-      object-fit: cover;
+      height: 520px;
+      object-fit: contain;
       object-position: center;
       border-radius: 24px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.55);
       box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
-      background: rgba(255, 255, 255, 0.45);
+      box-sizing: border-box;
     }
 
     .tribute-images.single {
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns: 1fr;
     }
 
     .tribute-images.single img {
-      max-height: 520px;
+      height: 620px;
     }
 
     .tribute-author {
-      margin-top: 24px;
+      margin-top: 26px;
       font-weight: 600;
     }
 
-    @media (max-width: 640px) {
-      .tribute-images img {
-        height: 300px;
+    @media (max-width: 800px) {
+      .tribute-images {
+        grid-template-columns: 1fr;
+      }
+
+      .tribute-images img,
+      .tribute-images.single img {
+        height: auto;
+        max-height: none;
       }
     }
   </style>
@@ -159,3 +170,4 @@
   </div>
 </body>
 </html>
+```
